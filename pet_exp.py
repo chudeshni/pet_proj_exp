@@ -4,14 +4,14 @@ def add_exp():
     try:
         am = float(input("Сумма: "))
     except ValueError:
-        print("Число введи придурок")
+        print("Число введи")
         return
     exp.append({"category": category, "amount": am})
     print(f"Добавлено: {category}-{am}")
 
 def sh_all():
     if not exp:
-        print("Нихуя нет")
+        print("Ничего нет")
         return
     for i, e in enumerate(exp, 1):
         print(f"{i}. {e['category']}: {e['amount']}")
@@ -22,7 +22,7 @@ def show_total():
 
 def show_by_category():
     if not exp:
-        print("Нихуя нет")
+        print("Ничего нет")
         return
     cat = input("Введите категорию для фильтрации: ").strip()
     filtered = [e for e in exp if e["category"] == cat]
@@ -52,7 +52,7 @@ def main():
         elif ch == "4":
             show_by_category()
         elif ch == "0":
-            print("Go naxyi")
+            print("удачи")
             break
         else:
             print("naxyi")
